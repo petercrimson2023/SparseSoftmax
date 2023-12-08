@@ -9,6 +9,8 @@ softmax <- function(x)
   return(exp_x / sum(exp_x))
 }
 
+
+
 softmax_predict=function(beta,X,y,p,k)
 {
   beta_matrix <- matrix(beta, nrow = p, ncol = k)
