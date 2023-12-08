@@ -1,1 +1,4 @@
 exportPattern("^[[:alpha:]]+")
+
+importFrom(Rcpp, evalCpp)
+useDynLib(SparseSoftmax, .registration = TRUE)

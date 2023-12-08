@@ -2,7 +2,7 @@ library(Rcpp)
 library(nnet)
 #sourceCpp("multi_logistic_L1.cpp")
 
-sourceCpp("fista.cpp")
+sourceCpp("src/fista.cpp")
 
 
 
@@ -46,7 +46,7 @@ y_one_hot=class.ind(y)
 
 result = fista(lambda,L_init,beta0,X,y_one_hot,n=n,p=p,k=k)
 
-source("evaluation.R")
+source("R/evaluation.R")
 
 plot_function(result)
 
