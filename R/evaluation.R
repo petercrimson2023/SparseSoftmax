@@ -1,3 +1,67 @@
+#' @import ggplot2
+#' @import patchwork
+#' @import caret
+#'
+#' Softmax Transformation
+#'
+#' This function applies the softmax transformation to a numeric vector,
+#' converting it into a vector of probabilities that sum to 1.
+#'
+#' @param x Numeric vector to be transformed.
+#' @return A numeric vector of probabilities.
+#' @examples
+#' x <- c(1, 2, 3)
+#' softmax(x)
+#'
+#' Softmax-based Prediction
+#'
+#' Predicts class labels for a dataset using softmax regression.
+#' Requires regression coefficients, feature matrix, labels, and class details.
+#'
+#' @param beta Regression coefficients.
+#' @param X Feature matrix.
+#' @param y True labels.
+#' @param p Number of features.
+#' @param k Number of classes.
+#' @return Predicted class labels.
+#' @examples
+#' # Assuming beta, X, y, p, and k are defined
+#' softmax_predict(beta, X, y, p, k)
+#'
+#' Plotting Softmax Regression Results
+#'
+#' Visualizes the results of softmax regression by generating a series of plots
+#' for each class showing the regression coefficients and a plot for the loss function.
+#'
+#' @param result Results of the softmax regression.
+#' @examples
+#' # Assuming result is defined
+#' plot_function(result)
+#'
+#' Accuracy Metrics for Softmax Regression
+#'
+#' Calculates and returns accuracy metrics like Sensitivity, Specificity, F1 Score,
+#' and Balanced Accuracy for a softmax regression model.
+#'
+#' @param result Results of the softmax regression.
+#' @param x_matrix Input feature matrix.
+#' @param y True labels.
+#' @param p Number of features.
+#' @param k Number of classes.
+#' @return Confusion matrix and accuracy metrics.
+#' @examples
+#' # Assuming result, x_matrix, y, p, and k are defined
+#' accuracy_function(result, x_matrix, y, p, k)
+#'
+#'
+#' @export
+#'
+
+
+
+
+
+
 library(ggplot2)
 library(patchwork)
 library(caret)

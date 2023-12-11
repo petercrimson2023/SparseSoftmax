@@ -6,7 +6,7 @@ using namespace arma;
 
 
 // [[Rcpp::export]]
-Rcpp::List fista(double lambda, double L_init, const mat& theta0, const mat& X, const mat& y_one_hot,
+Rcpp::List fista(double lambda, double L_init, const arma::mat& theta0, const arma::mat& X, const arma::mat& y_one_hot,
                  int max_iter=10000, double eps = 1e-6, double eita = 1.2, bool loss_compute =true,
                  int n=1, int p=1, int k=1)
 {
@@ -62,7 +62,7 @@ Rcpp::List fista(double lambda, double L_init, const mat& theta0, const mat& X, 
     //bool end_loop_condition = false;
 
     double beta_delta = arma::max(arma::max(arma::abs(theta_new - theta_old)));
-    double loss_delta = std::abs(loss_list[times] - loss_list[times - 1]);
+    //double loss_delta = std::abs(loss_list[times] - loss_list[times - 1]);
 
     // if (!loss_compute) {
     //   end_loop_condition = (times > max_iter) || (bool)(arma::max(arma::abs(theta_new - theta_old)) < eps);

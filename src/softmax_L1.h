@@ -5,7 +5,7 @@
 
 using namespace arma;
 
-mat softmax(const mat& X)
+mat softmax(const arma::mat& X)
 {
   mat expX = arma::exp(X-repmat(max(X,1),1,X.n_cols));
   mat expXsum = arma::sum(expX, 1);

@@ -12,16 +12,16 @@ Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 #endif
 
 // fista
-Rcpp::List fista(double lambda, double L_init, const mat& theta0, const mat& X, const mat& y_one_hot, int max_iter, double eps, double eita, bool loss_compute, int n, int p, int k);
+Rcpp::List fista(double lambda, double L_init, const arma::mat& theta0, const arma::mat& X, const arma::mat& y_one_hot, int max_iter, double eps, double eita, bool loss_compute, int n, int p, int k);
 RcppExport SEXP _SparseSoftmax_fista(SEXP lambdaSEXP, SEXP L_initSEXP, SEXP theta0SEXP, SEXP XSEXP, SEXP y_one_hotSEXP, SEXP max_iterSEXP, SEXP epsSEXP, SEXP eitaSEXP, SEXP loss_computeSEXP, SEXP nSEXP, SEXP pSEXP, SEXP kSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< double >::type lambda(lambdaSEXP);
     Rcpp::traits::input_parameter< double >::type L_init(L_initSEXP);
-    Rcpp::traits::input_parameter< const mat& >::type theta0(theta0SEXP);
-    Rcpp::traits::input_parameter< const mat& >::type X(XSEXP);
-    Rcpp::traits::input_parameter< const mat& >::type y_one_hot(y_one_hotSEXP);
+    Rcpp::traits::input_parameter< const arma::mat& >::type theta0(theta0SEXP);
+    Rcpp::traits::input_parameter< const arma::mat& >::type X(XSEXP);
+    Rcpp::traits::input_parameter< const arma::mat& >::type y_one_hot(y_one_hotSEXP);
     Rcpp::traits::input_parameter< int >::type max_iter(max_iterSEXP);
     Rcpp::traits::input_parameter< double >::type eps(epsSEXP);
     Rcpp::traits::input_parameter< double >::type eita(eitaSEXP);
